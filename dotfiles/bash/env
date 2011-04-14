@@ -1,0 +1,2 @@
+export PATH=$PATH:~/bin
+export LS_COLORS='di=1;33:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:*.deb=90'

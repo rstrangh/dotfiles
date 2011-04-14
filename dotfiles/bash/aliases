@@ -1,0 +1,43 @@
+# general aliases
+alias c='clear'
+
+# directory aliases
+alias iw='cd ~/Dokumente/innoQ/workspace'
+alias ir='cd ~/Dokumente/innoQ/Repositories'
+alias md='mkdir -p'
+alias ..='cd ..'   # up one dir
+
+# git aliases
+alias gs='git status'
+alias gau='git add -u'
+alias gai='git add -i'
+
+# ls aliases
+alias ls='ls --color=auto'
+alias ll='ls -lah --color=auto'
+
+# functions
+function take() { 
+    mkdir -p "$1"
+    cd "$1" 
+}
+
+function showprocess () { 
+    ps aux | grep $1
+}
+
+function edf () {
+	gedit ~/bin/dotfiles/bashrc ~/bin/dotfiles/bash/env ~/bin/dotfiles/bash/config ~/bin/dotfiles/bash/aliases
+	source ~/bin/dotfiles/bashrc 
+	source ~/bin/dotfiles/bash/*
+	source ~/.bashrc 
+}
+
+function gcom() { 
+    git commit -m "$*"
+}
+
+function ins () {
+    sudo apt-get install $1
+}
+
